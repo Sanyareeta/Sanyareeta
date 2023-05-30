@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4faa581038.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+      <nav>
+        <img src="Images/logo1.jpg" height="100" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav> 
+      <div class="header-text"></div>
+      <p>Web Developer</p>
+      <h1>Hi, I'm Sanya Singh from India</h1>
+    </div>
+ </div>
+ <!-- -----------about----------- -->
+ <div id="about">
+  <div class=""container>
+    <div class="row">
+      <div class="about-col-1">
+        <img src="Images/me pic.jpg" >
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title"> About Me</h1>
+        <p>I am a front end web developer currently pursuing Computer Science and Engineering. I have kneen interest in competitive coding and web development.</p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+          <p class="tab-links" onclick="opentab('Education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span> Web developement</span><br>Front end Web Developement</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="Projects">
+          <ul>
+            <li><span> College Blogspot website</span><br>Web Developement</li>
+          </ul>
+        </div>
+        <div class="tab-contents active-tab" id="Education">
+          <ul>
+            <li><span>2021-Current</span><br>Computer Science and Engineering from GL Bajaj Institute of Technology</li>
+            <li><span>2020-21</span><br>Class 12th-94.2%</li>
+            <li><span>2018-19</span><br>Class 10th-93.8%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ <!-- -------------portfolio------------ -->
+ <div id="portfolio">
+   <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="Images/work2.jpg" >
+        <div class="layer">
+          <h3>College Blogspot Website</h3>
+          <p>The website shows information about past and ongoing events in college. It also shows information about college. </p>
+        </div>
+      </div>
+      
+    </div>
+   </div>
+ </div>
+ <!-- ------------contact---------- -->
+ <div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-sharp fa-solid fa-paper-plane"></i>contact@example.com</p>
+        <p><i class="fa-solid fa-phone"></i>0123456700</p>
+        <div class="social-icons">
+          <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
+          <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+ </div>
+ <script>
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname){
+    for(tablink of tablinks)
+    tablink.classList.remove("active-link");
+  
+  for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+ </script> 
+ <script>
+
+  var sidemenu = document.getElementaryById("sidemenu");
+  function openmenu(){
+    sidemenu.style.right="0";
+  }
+  function closemenu(){
+    sidemenu.style.right="-200px";
+  }
+ </script>
+
+
+
+</body>
+</html>
